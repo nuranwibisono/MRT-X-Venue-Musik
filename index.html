@@ -34,7 +34,13 @@ main{flex:1;display:grid;grid-template-columns:340px 1fr;min-height:0}
 .pin{width:26px;height:26px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);background:var(--org);border:2px solid #fff;box-shadow:0 1px 4px #0006}
 .stn{width:14px;height:14px;border-radius:4px;border:2px solid #fff;box-shadow:0 1px 3px #0006}
 .note{font-size:12px;color:var(--mute);padding:6px 4px 14px}
-@media(max-width:760px){main{grid-template-columns:1fr;grid-template-rows:45% 55%}#list{order:2;border:0;border-top:1px solid var(--line)}#map{order:1}}
+@media(max-width:760px){
+  html,body{height:auto}body{min-height:100%}
+  main{display:flex;flex-direction:column;gap:18px;padding:14px 12px 20px}
+  #map{order:1;height:52vh;min-height:300px;flex:none;border:1px solid var(--line);border-radius:14px;overflow:hidden}
+  #list{order:2;overflow:visible;border:0;padding:0}
+  .v:last-of-type{margin-bottom:0}
+}
 </style>
 </head>
 <body>
